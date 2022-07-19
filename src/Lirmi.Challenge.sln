@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32526.322
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lirmi.Challenge.WebApp", "Lirmi.Challenge.WebApp\Lirmi.Challenge.WebApp.csproj", "{BABE48DA-3183-4197-B84F-60C419C0C5DC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lirmi.Challenge.WebApp", "Lirmi.Challenge.WebApp\Lirmi.Challenge.WebApp.csproj", "{BABE48DA-3183-4197-B84F-60C419C0C5DC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lirmi.Challenge.API", "Lirmi.Challenge.API\Lirmi.Challenge.API.csproj", "{3C447493-034B-46AC-8160-C2EC53A34F26}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lirmi.Challenge.Data", "Lirmi.Challenge.Data\Lirmi.Challenge.Data.csproj", "{7B1E194E-2C61-4AD3-8616-A8B171B9AD86}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lirmi.Challenge.DataGeneration", "Lirmi.Challenge.DataGeneration\Lirmi.Challenge.DataGeneration.csproj", "{F059EC19-A3B1-466D-96E4-7CDCA19C21E3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +21,18 @@ Global
 		{BABE48DA-3183-4197-B84F-60C419C0C5DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BABE48DA-3183-4197-B84F-60C419C0C5DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BABE48DA-3183-4197-B84F-60C419C0C5DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C447493-034B-46AC-8160-C2EC53A34F26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C447493-034B-46AC-8160-C2EC53A34F26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C447493-034B-46AC-8160-C2EC53A34F26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C447493-034B-46AC-8160-C2EC53A34F26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B1E194E-2C61-4AD3-8616-A8B171B9AD86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B1E194E-2C61-4AD3-8616-A8B171B9AD86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B1E194E-2C61-4AD3-8616-A8B171B9AD86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B1E194E-2C61-4AD3-8616-A8B171B9AD86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F059EC19-A3B1-466D-96E4-7CDCA19C21E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F059EC19-A3B1-466D-96E4-7CDCA19C21E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F059EC19-A3B1-466D-96E4-7CDCA19C21E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F059EC19-A3B1-466D-96E4-7CDCA19C21E3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

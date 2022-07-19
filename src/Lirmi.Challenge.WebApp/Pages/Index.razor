@@ -1,6 +1,49 @@
 ﻿@page "/"
+@using Lirmi.Challenge.Data.Transport.Core.Response
+@using Lirmi.Challenge.Data.Transport.School.CQS.Query.Result
+@using Lirmi.Challenge.Data.Transport.School.QueryEntity
+@using Lirmi.Challenge.WebApp.Constants
+
+@inject HttpClient _httpClient
 
 <PageTitle>Index</PageTitle>
 
-<MudText Typo="Typo.h3" GutterBottom="true">Lirmi Challenge</MudText>
-<MudText Typo="Typo.h6"Class="mb-8">Construir una UI que renderice por pantalla registros almacenados en una base de datos local según instrucciones entregadas.</MudText>
+<MudText Typo="Typo.h3" GutterBottom="true">LISTAR COLEGIOS</MudText>
+<MudText Typo="Typo.h6" Class="mb-8">Acontinuación se listarán los colegios registrados.</MudText>
+
+<MudGrid Justify="Justify.Center" class="pr-4 pl-4">
+    @foreach (var item in schools)
+    {
+        <MudItem xs="3">
+            <MudCard>
+                <MudCardHeader>
+                    <CardHeaderContent>
+                        <MudText Typo="Typo.body1">@item.Name</MudText>
+                        <MudText Typo="Typo.h4">@item.Code</MudText>
+                        <MudText Typo="Typo.h6">@item.ShortName</MudText>
+                    </CardHeaderContent>
+                </MudCardHeader>
+                <MudCardActions>
+                    <MudIconButton Icon="@Icons.Filled.Edit" Color="Color.Primary" />
+                    <MudIconButton Icon="@Icons.Filled.Delete" Color="Color.Error" />
+                </MudCardActions>
+            </MudCard>
+ 
+        </MudItem>
+ 
+    }
+ 
+</MudGrid>
+
+@code {
+    List<SchoolQueryEntity> schools;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var response = await _httpClient.GetAsync($"{Constants.URLConstants.SchoolAPI.BASE_URL}{URLConstants.SchoolAPI.GET_ALL}");
+        response.EnsureSuccessStatusCode();
+        var schoolListString = await response.Content.ReadAsStringAsync();
+        var schoolList = await response.Content.ReadFromJsonAsync<BaseResponse<GetAllSchoolResult>>();
+        schools = schoolList.Result.Schools.ToList();
+    }
+}

@@ -11,6 +11,16 @@
 		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="6.0.4" PrivateAssets="all" />
 		<PackageReference Include="MudBlazor" Version="6.0.9" />
 	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\Lirmi.Challenge.Data\Lirmi.Challenge.Data.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Agents\API\Grade\" />
+	  <Folder Include="Agents\API\Subject\" />
+	  <Folder Include="Utils\" />
+	</ItemGroup>
 	
 	
 </Project>

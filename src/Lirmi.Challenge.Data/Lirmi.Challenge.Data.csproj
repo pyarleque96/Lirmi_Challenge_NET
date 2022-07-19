@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="CQS\Grade\Command\" />
+    <Folder Include="CQS\Grade\Query\" />
+    <Folder Include="CQS\Subject\Command\" />
+    <Folder Include="CQS\Subject\Query\" />
+    <Folder Include="Transport\Grade\CQS\Command\Parameter\" />
+    <Folder Include="Transport\Grade\CQS\Command\Result\" />
+    <Folder Include="Transport\Grade\CQS\Query\Parameter\" />
+    <Folder Include="Transport\Grade\CQS\Query\Result\" />
+    <Folder Include="Transport\School\CQS\Command\Parameter\" />
+    <Folder Include="Transport\School\CQS\Command\Result\" />
+    <Folder Include="Transport\Subject\CQS\Command\Parameter\" />
+    <Folder Include="Transport\Subject\CQS\Command\Result\" />
+    <Folder Include="Transport\Subject\CQS\Query\Parameter\" />
+    <Folder Include="Transport\Subject\CQS\Query\Result\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.UnitOfWork" Version="3.1.0" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="6.0.5" />
+  </ItemGroup>
+
+</Project>
